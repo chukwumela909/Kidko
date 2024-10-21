@@ -8035,10 +8035,11 @@ h3 a:hover{
   text-align: left;
 }
 
-.account-details h6 {
+.account-details h4 {
   margin-bottom: 8px;
   font-size: 16px;
-  color: #333;
+  color: #212f54;
+  font-weight: 700;
 }
 
 .account-details p {
