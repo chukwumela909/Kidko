@@ -43,7 +43,7 @@ vote_btns.forEach(button => {
                 localStorage.setItem('voter_email', voter_email.value);
                 localStorage.setItem('voter_votes', voter_votes.value);
                 vote_dialog.style.display = "none";
-                amount_topay.textContent = "Amount to pay: " + (localStorage.getItem('voter_votes') * 500).toString() + " Naira"
+                amount_topay.innerHTML = "<b>Amount to pay:</b> " + (localStorage.getItem('voter_votes') * 500).toString() + " Naira"
                 account_dialog.style.display = "block"
                 account_submit_button.addEventListener('click', () => {
                     if (receipt_input.files.length === 0) {

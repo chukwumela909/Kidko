@@ -8010,9 +8010,16 @@ h3 a:hover{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 55;
-  width: 350px;
+  width: 50%;
   text-align: center;
 }
+
+@media (max-width: 767px) {
+  .fixed-dialog-account {
+    width: 80%;
+  }
+}
+
 
 .fixed-dialog-account h5 {
   margin-bottom: 15px;
@@ -8044,7 +8051,7 @@ h3 a:hover{
 
 .account-details p {
   margin: 4px 0;
-  font-size: 14px;
+  font-size: 20px;
   color: #555;
 }
 
