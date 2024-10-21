@@ -7836,6 +7836,80 @@ h3 a:hover{
   height: 500px;
 }
 
+/* voting modal */
+.fixed-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 55;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .fixed-dialog {
+    width: 80%;
+  }
+}
+
+
+.fixed-dialog h5{
+  color: #212f54;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.fixed-dialog p{
+  color: #212f54;
+  margin-bottom: 5px;
+}
+
+.fixed-dialog input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.fixed-dialog input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.fixed-dialog input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fixed-dialog button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
 /* Style the dialog container */
 .dialog-container {
   position: fixed;

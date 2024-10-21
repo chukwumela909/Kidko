@@ -26,6 +26,30 @@
     <div class="preloader"></div>
     <!-- /.preloader -->
 
+<div class="fixed-dialog">
+    <h5>Please take note, each vote costs 500 Naira.</h2>
+    <p>Fill in the following fields and proceed to the next page in voting.</p>
+    <input id="voter_name" type="text" placeholder="Enter your name">
+    <input id="voter_email" type="email" placeholder="Enter your email">
+    <input id="voter_votes" type="number" placeholder="Input how many vote">
+    <button class="submit-btn">Proceed</button>
+    <button class="cancel-btn">Cancel</button>
+</div>
+
+  <div class="fixed-dialog-account">
+    <h5>Payment Details</h5>
+    <p>Kindly transfer the sum of 500 Naira to the account below and upload the receipt.</p>
+    <div class="account-details">
+        <h6>Account Details:</h6>
+        <p>Account Name: Greg</p>
+        <p>Account Number: 8061920919</p>
+        <p>Bank Name: Opay</p>
+    </div>
+    <input id="receipt" type="file" placeholder="Upload Receipt">
+    <button class="submit-btn">Proceed</button>
+    <button class="cancel-btn">Cancel</button>
+</div>
+
 
     <!-- search-box-layout -->
     <div class="wraper_flyout_search">
@@ -105,22 +129,22 @@
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
                                         <li class=""><a href="index.html">Home</a>
-                                           
+
                                         </li>
                                         <li class=""><a href="enter-competition.html">Enter Competition</a>
-                                        
+
                                         </li>
-                                 
+
                                         <li class="current "><a href="vote.html">Vote</a>
-                                      
+
                                         </li>
-                                                                 
+
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
-                     
+
                     </div>
                 </div>
             </div>
@@ -144,16 +168,16 @@
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
                                 <li class=""><a href="#">Home</a>
-                              
+
                                 </li>
                                 <li class=""><a href="enter-competition.html">Enter Competition</a>
-                             
+
                                 </li>
-                           
+
                                 <li class="current "><a href="#">Vote</a>
-                             
+
                                 </li>
-                            
+
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -200,7 +224,7 @@
                             </a>
                         </figure>
                         <div class="lower-content">
-                            <div id="vote" class="link-btn"><a><i class="flaticon">Vote</i></a></div>
+                            <div class="link-btn vote"><a><i class="flaticon">Vote</i></a></div>
                             <h3><a>Treasure oghene ovo</a></h3>
                             <div class="price">8 months</div>
                             <ul class="info-box">
@@ -219,7 +243,7 @@
                             </a>
                         </figure>
                         <div class="lower-content">
-                            <div id="vote" class="link-btn"><a><i class="flaticon">Vote</i></a></div>
+                            <div class="link-btn vote"><a><i class="flaticon">Vote</i></a></div>
                             <h3><a>Anita udeme </a></h3>
                             <div class="price"> 6 months</div>
                             <ul class="info-box">
@@ -238,7 +262,7 @@
                             </a>
                         </figure>
                         <div class="lower-content">
-                            <div id="vote" class="link-btn"><a><i class="flaticon">Vote</i></a></div>
+                            <div class="link-btn vote"><a><i class="flaticon">Vote</i></a></div>
                             <h3><a>Patience goodnews</a></h3>
                             <div class="price">14 months</div>
                             <ul class="info-box">
@@ -252,7 +276,7 @@
             </div>
         </div>
     </section>
-   
+
     </section>
 
     <footer class="main-footer">
@@ -364,7 +388,9 @@
 
     <!-- main-js -->
     <!-- <script src="js/script.js"></script> -->
-     <script src="/script/vote.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script/vote.js"></script>
 
 </body><!-- End of .page_wrapper -->
 
