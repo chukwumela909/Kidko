@@ -7997,3 +7997,80 @@ h3 a:hover{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.fixed-dialog-account {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 55;
+  width: 350px;
+  text-align: center;
+}
+
+.fixed-dialog-account h5 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.fixed-dialog-account p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.account-details {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.account-details h6 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.account-details p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.fixed-dialog-account input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.fixed-dialog-account button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.submit-btn-account {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.cancel-btn-account {
+  background-color: #e74c3c;
+  color: #fff;
+}

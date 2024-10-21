@@ -20,6 +20,11 @@ const voter_votes = document.querySelector("#voter_votes")
 const vote_dialog_proceed = document.querySelector(".submit-btn")
 const vote_dialog_cancel = document.querySelector(".cancel-btn")
 
+const account_dialog = document.querySelector(".fixed-dialog-account")
+const account_cancel_button = document.querySelector(".cancel-btn-account")
+const account_submit_button = document.querySelector(".submit-btn-account")
+const receipt_input = document.querySelector("#receipt")
+
 
 
 vote_btns.forEach(button => {
@@ -27,7 +32,7 @@ vote_btns.forEach(button => {
         vote_dialog.style.display = "block"
         vote_dialog_proceed.addEventListener('click', () => {
             if (voter_name.value.trim() === "" || voter_email.value.trim() === "" || voter_votes.value.trim() === "") {
-               return Swal.fire({
+                return Swal.fire({
                     title: "Error",
                     text: 'Input fields cannot be left blank',
                     icon: "error"
@@ -37,9 +42,28 @@ vote_btns.forEach(button => {
                 localStorage.setItem('voter_email', voter_email.value);
                 localStorage.setItem('voter_votes', voter_votes.value);
                 vote_dialog.style.display = "none";
+                account_dialog.style.display = "block"
+                account_submit_button.addEventListener('click', () => {
+                    if (receipt_input.files.length === 0) {
+                        return Swal.fire({
+                            title: "Error",
+                            text: 'Please upload a receipt',
+                            icon: "error"
+                        });
+                    } else {
+
+                        
+                        Swal.fire({
+                            title: "Success",
+                            text: 'Receipt uploaded, you will receive a confirmation mail',
+                            icon: "success"
+                        });
+                        account_dialog.style.display = "none";
+                    }
+                })
             }
         });
-        
+
     });
 });
 
@@ -49,4 +73,7 @@ vote_dialog_cancel.addEventListener('click', () => {
     vote_dialog.style.display = "none"
 })
 
+account_cancel_button.addEventListener('click', () => {
+    account_dialog.style.display = "none"
+})
 
