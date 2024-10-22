@@ -7792,6 +7792,7 @@ h3 a:hover{
 
 .contact-form-section .contact-form .form-group input[type='text'],
 .contact-form-section .contact-form .form-group input[type='email'],
+.contact-form-section .contact-form .form-group input[type='number'],
 .contact-form-section .contact-form .form-group textarea{
   position: relative;
   display: block;

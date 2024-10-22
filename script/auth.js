@@ -105,9 +105,13 @@ function register() {
                                 hideLoader()
                                 Swal.fire({
                                     title: "Success",
-                                    text: 'Registration successful',
+                                    text: "Uploaded successfully",
                                     icon: "success"
                                 });
+                                setTimeout(() => {
+                                    window.location.href = "/vote.html"
+                                }, 2000);
+                               
                             }
                         })
                         .catch(error => {
