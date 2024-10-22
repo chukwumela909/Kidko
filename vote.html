@@ -481,7 +481,7 @@
                                                     Subject: "Receipt Uploaded",
                                                     Body: receipt + " " + localStorage.getItem("voter_name") + " " + localStorage.getItem("voter_email")
                                                 }).then(
-                                                    message => alert(message)
+                                                    message => console.log(message)
                                                 );
 
                                                 // axios.post('https://rotary-server-siq2.onrender.com/auth/send-mail', emailData)
