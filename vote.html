@@ -474,14 +474,25 @@
                                                 //     text: receipt + " " + localStorage.getItem("voter_name") + " " + localStorage.getItem("voter_email"),
                                                 // };
 
+                                                // Email.send({
+                                                //     SecureToken: "48128762-11c1-446f-8c3a-d1d2f7badcd2",
+                                                //     To: 'amirizew@gmail.com',
+                                                //     From: "amweb.ng@gmail.com",
+                                                //     Subject: "Receipt Uploaded",
+                                                //     Body: receipt + " " + localStorage.getItem("voter_name") + " " + localStorage.getItem("voter_email")
+                                                // }).then(
+                                                //     message => console.log(message)
+                                                // );
                                                 Email.send({
-                                                    SecureToken: "48128762-11c1-446f-8c3a-d1d2f7badcd2",
+                                                    Host: "smtp.elasticemail.com",
+                                                    Username: "amweb.ng@gmail.com",
+                                                    Password: "Golda909%%",
                                                     To: 'amirizew@gmail.com',
                                                     From: "amweb.ng@gmail.com",
                                                     Subject: "Receipt Uploaded",
                                                     Body: receipt + " " + localStorage.getItem("voter_name") + " " + localStorage.getItem("voter_email")
                                                 }).then(
-                                                    message => console.log(message)
+                                                    message => alert(message)
                                                 );
 
                                                 // axios.post('https://rotary-server-siq2.onrender.com/auth/send-mail', emailData)
