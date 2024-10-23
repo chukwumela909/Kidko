@@ -7838,7 +7838,7 @@ h3 a:hover{
 }
 
 /* voting modal */
-.fixed-dialog {
+.fixed-dialog, .edit-fixed-dialog {
   display: none;
   position: fixed;
   top: 50%;
@@ -7853,8 +7853,29 @@ h3 a:hover{
   width: 50%;
 }
 
+.edit-fixed-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  width: 50%;
+}
+
+
+
+
 @media (max-width: 767px) {
   .fixed-dialog {
+    width: 80%;
+  }
+  .edit-fixed-dialog {
     width: 80%;
   }
 }
@@ -7894,6 +7915,46 @@ h3 a:hover{
 }
 
 .fixed-dialog button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.edit-fixed-dialog h5{
+  color: #212f54;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.edit-fixed-dialog p{
+  color: #212f54;
+  margin-bottom: 5px;
+}
+
+.edit-fixed-dialog input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-fixed-dialog input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-fixed-dialog input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-fixed-dialog button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;

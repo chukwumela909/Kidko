@@ -1,0 +1,363 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Kidko - HTML 5 Template Preview</title>
+
+    <!-- Stylesheets -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: circular;
+
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: circular;
+
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+        }
+    </style>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/util.js"></script>
+</head>
+
+<!-- page wrapper -->
+
+<body class="boxed_wrapper" cz-shortcut-listen="true">
+    <style>
+        /**
+     * Style for the update info popup iframe with notification about rules limits exceeded.
+     * Should be injected into web page to set the popup position on page properly.
+     */
+
+        .adguard-rules-limits-exceeded-iframe {
+            color-scheme: none;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            border: none;
+            width: 376px;
+        }
+    </style>
+
+
+    <!-- .preloader -->
+    <div class="preloader" style="display: none;"></div>
+    <!-- /.preloader -->
+
+
+    
+    <div class="loader" id="loginLoader"></div>
+
+    <!-- search-box-layout -->
+    <div class="wraper_flyout_search">
+        <div class="table">
+            <div class="table-cell">
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-close">
+                    <span class="flyout-search-close-line"></span>
+                    <span class="flyout-search-close-line"></span>
+                </div>
+                <div class="flyout_search">
+                    <div class="flyout-search-title">
+                        <h4>Search</h4>
+                    </div>
+                    <div class="flyout-search-bar">
+                        <form role="search" method="get" action="#">
+                            <div class="form-row">
+                                <input type="search" placeholder="Type to search..." value="" name="s" required="">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search-box-layout end -->
+
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <div class="header-top">
+            <div class="container">
+                <div class="inner-container clearfix">
+
+                    <div class="header-info pull-right">
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:0803 338 7308">0803 338 7308</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="rotaryphcosmo@gmail.com">rotaryphcosmo@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-plus"></i>
+                                <a href="enter-competition.html">Enter Competition</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <!--Page Title-->
+    <section class="page-title centred" style="background-image: url(images/background/page-title.jpg);">
+        <div class="container">
+            <div class="content-box">
+                <h1>Admin Page</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a style="color: #FFD101;" href="adminx.html">Votes</a></li>
+                    <li style="color: white;"><a href="adminu.html">Users</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+
+    <!-- cart section -->
+    <section class="cart-section cart-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 table-column">
+                    <div class="table-outer">
+                      
+                        <table class="cart-table">
+                            <thead class="cart-header">
+                                <tr>
+                                    <th class="voter-name">Voter Name</th>
+                                    <th class="voter-email">Voter Email</th>
+                                    <th class="baby-name">Baby's Name</th>
+                                    <th class="mother-name">Mother's Name</th>
+                                    <th class="votes">Votes</th>
+                                    <th class="amount">Amount</th>
+                                    <th class="baby-photo">Baby Photo</th>
+                                    <th class="receipt">Receipt</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-table-body">
+                                <!-- Rows will be populated here by JavaScript -->
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- cart section end -->
+
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="parallax-scene parallax-scene-2 parallax-icon">
+                <span data-depth="0.40" class="parallax-layer icon icon-1"></span>
+                <span data-depth="0.50" class="parallax-layer icon icon-2"></span>
+                <span data-depth="0.30" class="parallax-layer icon icon-3"></span>
+                <span data-depth="0.40" class="parallax-layer icon icon-4"></span>
+                <span data-depth="0.50" class="parallax-layer icon icon-5"></span>
+                <span data-depth="0.30" class="parallax-layer icon icon-6"></span>
+                <span data-depth="0.40" class="parallax-layer icon icon-7"></span>
+            </div>
+            <div class="container">
+                <div class="widget-section">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="about-widget footer-widget">
+                                <h3 class="widget-title">About this competition</h3>
+                                <div class="widget-content">
+                                    <div class="text">
+                                        <p>Through fun and interactive activities, we aim to inspire the next generation
+                                            to become advocates for health and wellness in their communities.
+                                        </p>
+                                        <p> Our club is committed to making a positive impact, fostering leadership
+                                            skills, and promoting awareness about this preventable disease.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="link-widget footer-widget">
+                                <h3 class="widget-title">Useful Link</h3>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li><a href="#">About us</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="contact-widget footer-widget">
+                                <h3 class="widget-title">Get in Touch</h3>
+                                <div class="widget-content">
+                                    <div class="text">Reach out to us through any of the following means.</div>
+                                    <ul class="info-list">
+                                        <li><i class="fas fa-home"></i>Rotary club of Port Harcourt Cosmopolitan
+                                            Farrah Coffee Lounge 37 Aba road, Port Harcourt
+                                        </li>
+                                        <li><i class="fas fa-phone"></i><a href="tel:0803 338 7308">0803 338 7308</a>
+                                        </li>
+                                        <!-- <li><i class="fas fa-envelope"></i><a
+                                            href="mailto:info@example.com">info@example.com</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner-container clearfix">
+                    <div class="left-content pull-left">
+                        <div class="copyright">Copyright &copy; 2024. All Rights Reserved
+                            
+                        </div>
+                    </div>
+                    <div class="right-content pull-right">
+                        <figure class="footer-logo"><a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </figure>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target open" data-target="html">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+
+
+    <!-- jequery plugins -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/map-helper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function showLoader() {
+            document.getElementById("loginLoader").classList.add("active");
+        }
+
+        function hideLoader() {
+            document.getElementById("loginLoader").classList.remove("active");
+        }
+        async function fetchData() {
+            showLoader()
+            console.log("jj")
+            try {
+                const response = await fetch('https://rotary-server-siq2.onrender.com/auth/votes');
+                const data = await response.json();
+                console.log(data.message)
+                console.log(data.message[0].babyphoto)
+                populateTable(data.message);
+
+
+                function populateTable(dataArray) {
+                    const tableBody = document.getElementById('data-table-body');
+
+                    if (dataArray.lenght < 1) {
+                        tableBody.appendChild("<h1> No votes yet</h1>");
+                    }
+                    // Clear existing rows
+                    tableBody.innerHTML = '';
+
+                    // Iterate over the data array and create table rows
+                    dataArray.forEach(item => {
+                        const row = document.createElement('tr');
+                        row.style.padding = "5px"
+                        row.innerHTML = `
+                <td style = "padding: 10px" class="voter-name">${item.voterName}</td>
+                <td style = "padding: 10px" class="voter-email">${item.voterEmail}</td>
+                <td style = "padding: 10px" class="baby-name">${item.babyName}</td>
+                <td style = "padding: 10px" class="mother-name">${item.motherName}</td>
+                <td style = "padding: 10px" class="votes">${item.vote}</td>
+                <td style = "padding: 10px" class="amount">${item.amount}</td>
+                <td style = "padding: 10px" class="baby-photo">
+                    <a href="${item.babyPhoto}">   Click to view </a>
+             
+                  
+                </td>
+                <td class="receipt">
+                    <a href="${item.receipt}" target="_blank">View Receipt</a>
+                </td>
+            `;
+
+                        // Append the row to the table body
+                        tableBody.appendChild(row);
+                    });
+                    hideLoader()
+                }
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+        
+        window.onload = fetchData;
+    </script>
+
+
+
+
+
+    <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
+        <section id="shadow-host-companion"></section>
+    </div>
+</body><!-- End of .page_wrapper -->
+
+</html>
